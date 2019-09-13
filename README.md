@@ -1,4 +1,4 @@
-# Skills Membership - Sample Shell Script - Mac/Linux Version #
+# Upload attachment CDN - Sample Shell Script - Mac/Linux Version #
 
 This shell script (Mac/Linux) uses a Mavenlink API endpoint to upload file attachment via the Direct CDN Upload. Based on the steps provided on (http://developer.mavenlink.com/beta/#tag/Attachments%2Fpaths%2F~1attachments%2Fpost)
 
