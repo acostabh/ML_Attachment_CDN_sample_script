@@ -30,5 +30,5 @@ curl -X POST \
   -F 'utf8=✓' \
   -F 'file=@'$file
 
-#Step 3 -
+#Step 3 - Marks an upload as complete, and verifies its existence on the CDN
 curl -X PUT -H "Authorization: Bearer $token" "https://api.mavenlink.com/api/v1/attachments/$id/sync"
