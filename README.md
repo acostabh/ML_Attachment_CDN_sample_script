@@ -7,7 +7,7 @@ Disclaimer: These scripts are provided as sample code and they are NOT official 
 ## Pre-Requisites ##
 
   1. Make the shell scripts executable
-      - Navigate to the folder where you cloned the scripts (E.G: cd ~/Documents/ML-file-upload-sample-script)
+      - Navigate to the folder where you cloned the scripts (E.G: cd ~/Documents/ML_Attachment_CDN_sample_script)
       - Run this code (inside that folder only): chmod +x attach.sh
   2. Linux: Install JQ via your distribution's application manager. eg: apt-get install jq
   3. Mac: Install the Homebrew Package Manager and the JQ JSON parser/compiler for Shell scripting
@@ -23,6 +23,6 @@ Disclaimer: These scripts are provided as sample code and they are NOT official 
 
   1. Open terminal
   2. Navigate to the folder where you saved the script
-    - E.G: cd ~/Documents/ML-file-upload-sample-script
+    - E.G: cd ~/Documents/ML_Attachment_CDN_sample_script
   3. Run the script: ./attach.sh
   4. Follow the output on the prompt - if successful you will see a JSON formatted response with the new URL for the attachment
