@@ -8,7 +8,7 @@ Disclaimer: These scripts are provided as sample code and they are NOT official 
 
   1. Make the shell scripts executable
       - Navigate to the folder where you cloned the scripts (E.G: cd ~/Documents/ML-file-upload-sample-script)
-      - Run this code (inside that folder only): chmod +x *.sh
+      - Run this code (inside that folder only): chmod +x attach.sh
   2. Linux: Install JQ via your distribution's application manager. eg: apt-get install jq
   3. Mac: Install the Homebrew Package Manager and the JQ JSON parser/compiler for Shell scripting
      - run the setup script: ./setup.sh (follow the prompts)
