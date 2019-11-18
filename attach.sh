@@ -4,7 +4,7 @@ token=$(jq -r ".token" token.json)
 
 #step 1 - Use Mavenlink API to trigger temporary AWS S3 Authentication
 file="skills.csv"
-attachment=$(curl -H "Authorization: Bearer $token" --form "direct=true" --form "attachment[filename]=$file" --form "attachment[type]=post_attachment" "https://api.mavenlink.com/api/v1/attachments.json")
+attachment=$(curl -H -s "Authorization: Bearer $token" --form "direct=true" --form "attachment[filename]=$file" --form "attachment[type]=post_attachment" "https://api.mavenlink.com/api/v1/attachments.json")
 
 awsKey=$(jq -n "$attachment" | jq -r '.fields.AWSAccessKeyId')
 key=$(jq -n "$attachment" | jq -r '.fields.key')
@@ -31,4 +31,8 @@ curl -X POST \
   -F 'file=@'$file
 
 #Step 3 - Marks an upload as complete, and verifies its existence on the CDN
-curl -X PUT -H "Authorization: Bearer $token" "https://api.mavenlink.com/api/v1/attachments/$id/sync"
+curl -X -s PUT -H "Authorization: Bearer $token" "https://api.mavenlink.com/api/v1/attachments/$id/sync" | jq >> "attachment-log.txt"
+
+echo "#######################"
+echo ""
+echo "See the attachment-log.txt file for details. Use the ID from the JSON response to attach the uploaded file to a post or expense."
